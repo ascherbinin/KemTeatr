@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.64999999999999969" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="QbB-rb-YKb">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiO-zF-qBb">
+                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="c9v-qM-qD6"/>
+                        <constraint firstAttribute="height" constant="200" id="qtZ-tD-NR1"/>
+                        <constraint firstItem="uiO-zF-qBb" firstAttribute="leading" secondItem="QbB-rb-YKb" secondAttribute="leading" constant="8" id="s9x-BI-jrr"/>
+                        <constraint firstAttribute="trailing" secondItem="uiO-zF-qBb" secondAttribute="trailing" constant="8" id="tIl-E8-cOs"/>
+                        <constraint firstItem="uiO-zF-qBb" firstAttribute="top" secondItem="QbB-rb-YKb" secondAttribute="top" constant="89" id="vHs-06-0Dt"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="uiO-zF-qBb"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="c9v-qM-qD6"/>
+                            <exclude reference="qtZ-tD-NR1"/>
+                            <exclude reference="s9x-BI-jrr"/>
+                            <exclude reference="tIl-E8-cOs"/>
+                            <exclude reference="vHs-06-0Dt"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="uiO-zF-qBb"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="c9v-qM-qD6"/>
+                            <include reference="qtZ-tD-NR1"/>
+                            <include reference="s9x-BI-jrr"/>
+                            <include reference="tIl-E8-cOs"/>
+                            <include reference="vHs-06-0Dt"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="QbB-rb-YKb" secondAttribute="centerX" id="9Wp-3y-Ip6"/>
+                <constraint firstAttribute="centerY" secondItem="QbB-rb-YKb" secondAttribute="centerY" id="i0y-bc-czx"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="QbB-rb-YKb"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="9Wp-3y-Ip6"/>
+                    <exclude reference="i0y-bc-czx"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="QbB-rb-YKb"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="9Wp-3y-Ip6"/>
+                    <include reference="i0y-bc-czx"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

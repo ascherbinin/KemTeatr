@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
+
+@property (strong, nonatomic) UINavigationController *actorsNav;
+@property (strong, nonatomic) UINavigationController *eventsNav;
+@property (strong, nonatomic) UINavigationController *afishaNav;
+@property (strong, nonatomic) UINavigationController *repertoireNav;
 
 @end
 
@@ -16,7 +22,63 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    NSInteger tagID = 0;
+    
+    
+    ActorsViewController *actorsVC = [ActorsViewController new];
+    EventsViewController *eventVC = [EventsViewController new];
+    AfishaViewController *afishaVC = [AfishaViewController new];
+    RepertoireViewController *repertoireVC = [RepertoireViewController new];
+    
+    
+    //Actors Section
+    self.actorsNav = [[UINavigationController alloc] initWithRootViewController:actorsVC];
+    self.actorsNav.tabBarItem =
+    [[UITabBarItem alloc] initWithTitle:@"Actors"
+                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                    tag:tagID++];
+    
+    //Event Section
+    self.eventsNav = [[UINavigationController alloc] initWithRootViewController:eventVC];
+    self.eventsNav.tabBarItem =
+    [[UITabBarItem alloc] initWithTitle:@"Events"
+                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                    tag:tagID++];
+    
+    //Repertoire Section
+    self.repertoireNav = [[UINavigationController alloc] initWithRootViewController:repertoireVC];
+    self.repertoireNav.tabBarItem =
+    [[UITabBarItem alloc] initWithTitle:@"Repertoire"
+                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                    tag:tagID++];
+    //Afisha Section
+    self.afishaNav = [[UINavigationController alloc] initWithRootViewController:afishaVC];
+    self.afishaNav.tabBarItem =
+    [[UITabBarItem alloc] initWithTitle:@"Afisha"
+                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                    tag:tagID++];
+    
+ 
+    
+    NSArray *controllers = [[NSArray alloc]initWithObjects:
+                            self.afishaNav,
+                            self.actorsNav,
+                            self.repertoireNav,
+                            self.eventsNav
+                            ,nil ];
+    
+    tabBarController.viewControllers = controllers;
+    [tabBarController setSelectedIndex:1];
+    [[UITabBar appearance] setTintColor:[UIColor blueColor]];
+
+    
+    [self.window setRootViewController:tabBarController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

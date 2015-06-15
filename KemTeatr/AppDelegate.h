@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AfishaViewController.h"
+#import "RepertoireViewController.h"
+#import "EventsViewController.h"
+#import "ActorsViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

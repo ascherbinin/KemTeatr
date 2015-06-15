@@ -18,7 +18,9 @@
     [super viewDidLoad];
     self.view.layer.cornerRadius = 5;
     self.view.layer.masksToBounds =YES;
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    self.navigationController.title = @"Наши события";
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"EventsCell" bundle:nil] forCellReuseIdentifier:@"EventsCellID"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,14 +28,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
 }
-*/
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"EventsCellID"];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 142;
+}
 
 @end

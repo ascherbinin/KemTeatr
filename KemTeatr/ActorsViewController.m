@@ -16,15 +16,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"ActorsViewCell" bundle:nil] forCellWithReuseIdentifier:@"ActorsCell"];
    
-    self.innerView.layer.cornerRadius = 5;
-    self.innerView.layer.masksToBounds = YES;
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if(section ==0)
+    {
+       return 1;
+    }
+    else {
+        return 5;
+    }
+    
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ActorsCell" forIndexPath:indexPath];
+    
+    return  cell;
+}
+
+-(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 2;
 }
 
 /*

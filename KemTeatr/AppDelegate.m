@@ -72,7 +72,7 @@
                             ,nil ];
     
     tabBarController.viewControllers = controllers;
-    [tabBarController setSelectedIndex:1];
+    [tabBarController setSelectedIndex:0];
     [[UITabBar appearance] setTintColor:[UIColor blueColor]];
 
     

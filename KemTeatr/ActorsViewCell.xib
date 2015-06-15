@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ActorsViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="160"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoActorPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-Ff-oRQ">
+                        <rect key="frame" x="5" y="5" width="130" height="130"/>
+                        <color key="backgroundColor" red="0.41749460706354302" green="0.77407192415351944" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="8Ub-JF-6eg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Lastname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="git-dc-FES">
+                        <rect key="frame" x="0.0" y="135" width="140" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="5EI-Ff-oRQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="BLd-sS-7P1"/>
+                <constraint firstAttribute="trailing" secondItem="5EI-Ff-oRQ" secondAttribute="trailing" constant="5" id="Srt-Fa-zz3"/>
+                <constraint firstItem="git-dc-FES" firstAttribute="top" secondItem="5EI-Ff-oRQ" secondAttribute="bottom" id="UI8-Ds-Diz"/>
+                <constraint firstAttribute="trailing" secondItem="git-dc-FES" secondAttribute="trailing" id="XBr-pK-bso"/>
+                <constraint firstItem="5EI-Ff-oRQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="qfV-yx-NDE"/>
+                <constraint firstItem="git-dc-FES" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t0X-Jd-Unf"/>
+                <constraint firstAttribute="bottom" secondItem="git-dc-FES" secondAttribute="bottom" constant="5" id="tnb-6A-0pP"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="5EI-Ff-oRQ" id="534-hF-oXQ"/>
+                <outlet property="nameLabel" destination="git-dc-FES" id="ned-X5-fBF"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="NoActorPhoto" width="168" height="168"/>
+    </resources>
+</document>

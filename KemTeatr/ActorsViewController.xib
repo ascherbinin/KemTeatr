@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActorsViewController">
             <connections>
-                <outlet property="innerView" destination="Twi-mf-dhd" id="fQV-L5-BXL"/>
+                <outlet property="collectionView" destination="2wM-Q2-Gld" id="Ods-Ut-M0z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,71 +15,48 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.64999999999999969" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Twi-mf-dhd">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-RG-8P8">
-                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="vA7-RG-8P8" secondAttribute="trailing" constant="8" id="33M-z1-N6D"/>
-                        <constraint firstItem="vA7-RG-8P8" firstAttribute="leading" secondItem="Twi-mf-dhd" secondAttribute="leading" constant="8" id="5oO-gh-gXA"/>
-                        <constraint firstAttribute="width" constant="200" id="ARd-AE-iAn"/>
-                        <constraint firstItem="vA7-RG-8P8" firstAttribute="top" secondItem="Twi-mf-dhd" secondAttribute="top" constant="89" id="phU-t8-Ewy"/>
-                        <constraint firstAttribute="height" constant="200" id="ryX-54-2fg"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="subviews">
-                            <exclude reference="vA7-RG-8P8"/>
-                        </mask>
-                        <mask key="constraints">
-                            <exclude reference="ARd-AE-iAn"/>
-                            <exclude reference="ryX-54-2fg"/>
-                            <exclude reference="33M-z1-N6D"/>
-                            <exclude reference="5oO-gh-gXA"/>
-                            <exclude reference="phU-t8-Ewy"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="subviews">
-                            <include reference="vA7-RG-8P8"/>
-                        </mask>
-                        <mask key="constraints">
-                            <include reference="ARd-AE-iAn"/>
-                            <include reference="ryX-54-2fg"/>
-                            <include reference="33M-z1-N6D"/>
-                            <include reference="5oO-gh-gXA"/>
-                            <include reference="phU-t8-Ewy"/>
-                        </mask>
-                    </variation>
-                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2wM-Q2-Gld">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="bC9-Fp-ljf">
+                        <size key="itemSize" width="140" height="160"/>
+                        <size key="headerReferenceSize" width="50" height="30"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="5"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zsM-NE-iVF"/>
+                        <outlet property="delegate" destination="-1" id="0tC-w5-lrb"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="Twi-mf-dhd" secondAttribute="centerY" id="2bW-Y4-D6n"/>
-                <constraint firstAttribute="centerX" secondItem="Twi-mf-dhd" secondAttribute="centerX" id="gvg-eH-a9M"/>
+                <constraint firstAttribute="bottom" secondItem="2wM-Q2-Gld" secondAttribute="bottom" constant="65" id="Bmb-jw-4fr"/>
+                <constraint firstItem="2wM-Q2-Gld" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="dte-3p-0F5"/>
+                <constraint firstAttribute="trailing" secondItem="2wM-Q2-Gld" secondAttribute="trailing" id="lPJ-mC-XTW"/>
+                <constraint firstItem="2wM-Q2-Gld" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nmw-ec-z7g"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="Twi-mf-dhd"/>
+                    <exclude reference="2wM-Q2-Gld"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="2bW-Y4-D6n"/>
-                    <exclude reference="gvg-eH-a9M"/>
+                    <exclude reference="Bmb-jw-4fr"/>
+                    <exclude reference="dte-3p-0F5"/>
+                    <exclude reference="lPJ-mC-XTW"/>
+                    <exclude reference="nmw-ec-z7g"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="Twi-mf-dhd"/>
+                    <include reference="2wM-Q2-Gld"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="2bW-Y4-D6n"/>
-                    <include reference="gvg-eH-a9M"/>
+                    <include reference="Bmb-jw-4fr"/>
+                    <include reference="dte-3p-0F5"/>
+                    <include reference="lPJ-mC-XTW"/>
+                    <include reference="nmw-ec-z7g"/>
                 </mask>
             </variation>
         </view>

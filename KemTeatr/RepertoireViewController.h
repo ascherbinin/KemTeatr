@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RepertoireViewController : UIViewController
+@interface RepertoireViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 
 @end

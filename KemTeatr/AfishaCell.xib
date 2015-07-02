@@ -2,17 +2,35 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AfishaCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="KGk-i7-Jjw" customClass="AfishaCell">
+            <rect key="frame" x="0.0" y="-1" width="320" height="125"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="A6G-bD-sox">
+                        <rect key="frame" x="0.0" y="124" width="320" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="aCW-iG-Y3j"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="A6G-bD-sox" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="7ys-ef-ojW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="A6G-bD-sox" secondAttribute="trailing" constant="-8" id="ePi-6E-fLL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="A6G-bD-sox" secondAttribute="bottom" constant="-21" id="egN-KU-Gmy"/>
+                </constraints>
             </tableViewCellContentView>
+            <point key="canvasLocation" x="262" y="444.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="shadow" width="628" height="21"/>
+    </resources>
 </document>

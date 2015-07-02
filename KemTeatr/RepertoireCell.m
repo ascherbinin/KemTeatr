@@ -1,18 +1,18 @@
 //
-//  AfishaCell.m
+//  RepertoireCell.m
 //  KemTeatr
 //
-//  Created by Андрей Щербинин on 15.06.15.
+//  Created by Андрей Щербинин on 16.06.15.
 //  Copyright (c) 2015 Andrey Scherbinin. All rights reserved.
 //
 
-#import "AfishaCell.h"
+#import "RepertoireCell.h"
 
-@implementation AfishaCell
+@implementation RepertoireCell
 
 - (void)awakeFromNib {
     // Initialization code
-    self.backgroundColor = [UIColor clearColor];
+     self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

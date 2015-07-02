@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="335" id="KGk-i7-Jjw" customClass="RepertoireCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NoActorPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qlq-zC-eQb">
+                        <rect key="frame" x="15" y="14" width="97" height="140"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-BG-w2T">
+                        <rect key="frame" x="0.0" y="320" width="320" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="MhX-zz-0N4"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="afisha_frame" translatesAutoresizingMaskIntoConstraints="NO" id="VVZ-1E-uIg">
+                        <rect key="frame" x="8" y="8" width="110" height="154"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNk-uf-WAd">
+                        <rect key="frame" x="120" y="8" width="192" height="154"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzI-93-O2r">
+                                <rect key="frame" x="8" y="8" width="176" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d4-vR-ok2">
+                                <rect key="frame" x="8" y="74" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf6-4I-0kp">
+                                <rect key="frame" x="8" y="103" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfo-KI-K40">
+                                <rect key="frame" x="0.0" y="45" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.71267361111111116" green="0.61102480586671359" blue="0.26329527068062858" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67974480285466965" green="0.92422269570707072" blue="0.90613016209021191" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhI-zg-Otf">
+                        <rect key="frame" x="15" y="170" width="297" height="142"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVc-vH-kII">
+                                <rect key="frame" x="8" y="8" width="281" height="126"/>
+                                <mutableString key="text">Нильс, главный герой спектакля - довольно дерзкий мальчишка, чьи гадкие выходки не внушают никакой симпатии. Он из чистой вредности запирает отца в погребе, ставит подножки матушке, несущей полный подойник, разоряет птичьи гнезда, мучает животных… Но как только Нильса заколдовали, с ним стали происходить невероятные приключения. На спине гуся он отправляется в путешествие, в котором его подстерегают опасности. Именно приключения учат Нильса быть смелым, честным, верным своему слову. И именно опасности помогут главному герою превратиться из злого бездушного мальчишки в прекрасного Человека с добрым сердцем.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84691530744919574" green="0.83772221924023671" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qQa-BG-w2T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Mzr-av-5iW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qQa-BG-w2T" secondAttribute="bottom" constant="-29" id="ccE-9P-GCX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qQa-BG-w2T" secondAttribute="trailing" constant="-8" id="koq-os-I2p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="315" y="380"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="NoActorPhoto" width="168" height="168"/>
+        <image name="afisha_frame" width="217" height="296"/>
+        <image name="shadow" width="628" height="21"/>
+    </resources>
+</document>

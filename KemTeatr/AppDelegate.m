@@ -38,27 +38,27 @@
     //Actors Section
     self.actorsNav = [[UINavigationController alloc] initWithRootViewController:actorsVC];
     self.actorsNav.tabBarItem =
-    [[UITabBarItem alloc] initWithTitle:@"Actors"
+    [[UITabBarItem alloc] initWithTitle:@"Актеры"
                                   image:[UIImage imageNamed:@"main-icon-norm-1"]
                                     tag:tagID++];
     
     //Event Section
     self.eventsNav = [[UINavigationController alloc] initWithRootViewController:eventVC];
     self.eventsNav.tabBarItem =
-    [[UITabBarItem alloc] initWithTitle:@"Events"
+    [[UITabBarItem alloc] initWithTitle:@"События"
                                   image:[UIImage imageNamed:@"main-icon-norm-1"]
                                     tag:tagID++];
     
     //Repertoire Section
     self.repertoireNav = [[UINavigationController alloc] initWithRootViewController:repertoireVC];
     self.repertoireNav.tabBarItem =
-    [[UITabBarItem alloc] initWithTitle:@"Repertoire"
+    [[UITabBarItem alloc] initWithTitle:@"Репертуар"
                                   image:[UIImage imageNamed:@"main-icon-norm-1"]
                                     tag:tagID++];
     //Afisha Section
     self.afishaNav = [[UINavigationController alloc] initWithRootViewController:afishaVC];
     self.afishaNav.tabBarItem =
-    [[UITabBarItem alloc] initWithTitle:@"Afisha"
+    [[UITabBarItem alloc] initWithTitle:@"Афиша"
                                   image:[UIImage imageNamed:@"main-icon-norm-1"]
                                     tag:tagID++];
     

@@ -7,8 +7,11 @@
 //
 
 #import "EventsViewController.h"
+#import "EventsCell.h"
+#import "UIColor+ColorFromHex.h"
 
 @interface EventsViewController ()
+
 
 @end
 
@@ -16,9 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.layer.cornerRadius = 5;
-    self.view.layer.masksToBounds =YES;
-    self.navigationController.title = @"Наши события";
+    
+    self.navigationItem.title = @"Наши события";
+    NSShadow* shadow = [NSShadow new];
+    shadow.shadowOffset = CGSizeMake(0.5f, 1.0f);
+    shadow.shadowColor = [UIColor lightGrayColor];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSForegroundColorAttributeName: [UIColor colorWithHexString:@"995733"],
+                                                            NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.0f],
+                                                            NSShadowAttributeName: shadow
+                                                            }];
+    
+    
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wallBG.png"]];
+    
     
     [self.tableView registerNib:[UINib nibWithNibName:@"EventsCell" bundle:nil] forCellReuseIdentifier:@"EventsCellID"];
 }
@@ -35,14 +50,15 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"EventsCellID"];
+    EventsCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"EventsCellID"];
     
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 142;
+    return 129;
 }
+
 
 @end

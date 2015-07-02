@@ -11,33 +11,59 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-Gt-4ux">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="TQp-Dm-jWz">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="o2z-QR-huc">
+                            <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="o2z-QR-huc"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="o2z-QR-huc"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <tableView opaque="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-Gt-4ux">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="yRk-pL-Ntc"/>
                         <outlet property="delegate" destination="-1" id="Qj9-ID-dYH"/>
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.89686986020000004" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="TQp-Dm-jWz" secondAttribute="trailing" id="IxB-8L-2OH"/>
+                <constraint firstItem="TQp-Dm-jWz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KKC-qK-F2K"/>
                 <constraint firstItem="U7H-Gt-4ux" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="hun-9h-gtO">
-                    <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="U7H-Gt-4ux" secondAttribute="trailing" id="i4S-3h-iWq"/>
+                <constraint firstItem="TQp-Dm-jWz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mKi-IM-AvR">
+                    <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                </constraint>
                 <constraint firstItem="U7H-Gt-4ux" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pqo-iw-JmF"/>
                 <constraint firstAttribute="bottom" secondItem="U7H-Gt-4ux" secondAttribute="bottom" id="zdw-wL-hJy"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
+                    <exclude reference="TQp-Dm-jWz"/>
                     <exclude reference="U7H-Gt-4ux"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="IxB-8L-2OH"/>
+                    <exclude reference="KKC-qK-F2K"/>
+                    <exclude reference="mKi-IM-AvR"/>
                     <exclude reference="hun-9h-gtO"/>
                     <exclude reference="i4S-3h-iWq"/>
                     <exclude reference="pqo-iw-JmF"/>
@@ -46,9 +72,13 @@
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
+                    <include reference="TQp-Dm-jWz"/>
                     <include reference="U7H-Gt-4ux"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="IxB-8L-2OH"/>
+                    <include reference="KKC-qK-F2K"/>
+                    <include reference="mKi-IM-AvR"/>
                     <include reference="hun-9h-gtO"/>
                     <include reference="i4S-3h-iWq"/>
                     <include reference="pqo-iw-JmF"/>
@@ -57,4 +87,7 @@
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="shadow" width="628" height="21"/>
+    </resources>
 </document>

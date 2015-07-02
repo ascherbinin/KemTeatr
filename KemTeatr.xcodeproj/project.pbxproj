@@ -14,6 +14,8 @@
 		936EE3231B2EC285001B8F18 /* AfishaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936EE3211B2EC285001B8F18 /* AfishaCell.xib */; };
 		936EE3281B2ECECF001B8F18 /* EventsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EE3261B2ECECF001B8F18 /* EventsCell.m */; };
 		936EE3291B2ECECF001B8F18 /* EventsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936EE3271B2ECECF001B8F18 /* EventsCell.xib */; };
+		936EE3301B2FDBE7001B8F18 /* RepertoireCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EE32E1B2FDBE7001B8F18 /* RepertoireCell.m */; };
+		936EE3311B2FDBE7001B8F18 /* RepertoireCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936EE32F1B2FDBE7001B8F18 /* RepertoireCell.xib */; };
 		93C697651B2E7848003B47CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C697641B2E7848003B47CF /* main.m */; };
 		93C697681B2E7848003B47CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C697671B2E7848003B47CF /* AppDelegate.m */; };
 		93C697701B2E7848003B47CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C6976F1B2E7848003B47CF /* Images.xcassets */; };
@@ -27,6 +29,7 @@
 		93C6979A1B2E7C61003B47CF /* AfishaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C697981B2E7C61003B47CF /* AfishaViewController.xib */; };
 		93C6979E1B2E7C70003B47CF /* RepertoireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C6979C1B2E7C70003B47CF /* RepertoireViewController.m */; };
 		93C6979F1B2E7C70003B47CF /* RepertoireViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C6979D1B2E7C70003B47CF /* RepertoireViewController.xib */; };
+		93D9283C1B453858006FF848 /* UIColor+ColorFromHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9283B1B453858006FF848 /* UIColor+ColorFromHex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		936EE3251B2ECECF001B8F18 /* EventsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCell.h; sourceTree = "<group>"; };
 		936EE3261B2ECECF001B8F18 /* EventsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCell.m; sourceTree = "<group>"; };
 		936EE3271B2ECECF001B8F18 /* EventsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsCell.xib; sourceTree = "<group>"; };
+		936EE32D1B2FDBE7001B8F18 /* RepertoireCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepertoireCell.h; sourceTree = "<group>"; };
+		936EE32E1B2FDBE7001B8F18 /* RepertoireCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepertoireCell.m; sourceTree = "<group>"; };
+		936EE32F1B2FDBE7001B8F18 /* RepertoireCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepertoireCell.xib; sourceTree = "<group>"; };
 		93C6975F1B2E7848003B47CF /* KemTeatr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KemTeatr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C697631B2E7848003B47CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C697641B2E7848003B47CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,6 +79,8 @@
 		93C6979B1B2E7C70003B47CF /* RepertoireViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepertoireViewController.h; sourceTree = "<group>"; };
 		93C6979C1B2E7C70003B47CF /* RepertoireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepertoireViewController.m; sourceTree = "<group>"; };
 		93C6979D1B2E7C70003B47CF /* RepertoireViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepertoireViewController.xib; sourceTree = "<group>"; };
+		93D9283A1B453858006FF848 /* UIColor+ColorFromHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFromHex.h"; sourceTree = "<group>"; };
+		93D9283B1B453858006FF848 /* UIColor+ColorFromHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFromHex.m"; sourceTree = "<group>"; };
 		EE69CCD1085A35B522F8AF60 /* libPods-KemTeatr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KemTeatr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +133,16 @@
 			name = EventsCell;
 			sourceTree = "<group>";
 		};
+		936EE32C1B2FDBCE001B8F18 /* RepertoireCell */ = {
+			isa = PBXGroup;
+			children = (
+				936EE32D1B2FDBE7001B8F18 /* RepertoireCell.h */,
+				936EE32E1B2FDBE7001B8F18 /* RepertoireCell.m */,
+				936EE32F1B2FDBE7001B8F18 /* RepertoireCell.xib */,
+			);
+			name = RepertoireCell;
+			sourceTree = "<group>";
+		};
 		93C697561B2E7848003B47CF = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +166,8 @@
 		93C697611B2E7848003B47CF /* KemTeatr */ = {
 			isa = PBXGroup;
 			children = (
-				93C6978B1B2E7C07003B47CF /* RepertoireView */,
+				93D928351B45374E006FF848 /* Category */,
+				93C6978B1B2E7C07003B47CF /* Repertoire */,
 				93C6978A1B2E7BCB003B47CF /* Afisha */,
 				93C697891B2E7BC5003B47CF /* Events */,
 				93C697881B2E799F003B47CF /* Actors */,
@@ -220,14 +239,24 @@
 			name = Afisha;
 			sourceTree = "<group>";
 		};
-		93C6978B1B2E7C07003B47CF /* RepertoireView */ = {
+		93C6978B1B2E7C07003B47CF /* Repertoire */ = {
 			isa = PBXGroup;
 			children = (
+				936EE32C1B2FDBCE001B8F18 /* RepertoireCell */,
 				93C6979B1B2E7C70003B47CF /* RepertoireViewController.h */,
 				93C6979C1B2E7C70003B47CF /* RepertoireViewController.m */,
 				93C6979D1B2E7C70003B47CF /* RepertoireViewController.xib */,
 			);
-			name = RepertoireView;
+			name = Repertoire;
+			sourceTree = "<group>";
+		};
+		93D928351B45374E006FF848 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				93D9283A1B453858006FF848 /* UIColor+ColorFromHex.h */,
+				93D9283B1B453858006FF848 /* UIColor+ColorFromHex.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		9E289E3AFDD3B06BC9142168 /* Frameworks */ = {
@@ -331,6 +360,7 @@
 			files = (
 				93C697901B2E7C42003B47CF /* ActorsViewController.xib in Resources */,
 				93C6979A1B2E7C61003B47CF /* AfishaViewController.xib in Resources */,
+				936EE3311B2FDBE7001B8F18 /* RepertoireCell.xib in Resources */,
 				93C697951B2E7C52003B47CF /* EventsViewController.xib in Resources */,
 				936EE3231B2EC285001B8F18 /* AfishaCell.xib in Resources */,
 				93C6979F1B2E7C70003B47CF /* RepertoireViewController.xib in Resources */,
@@ -390,6 +420,7 @@
 			files = (
 				936EE3281B2ECECF001B8F18 /* EventsCell.m in Sources */,
 				93C697991B2E7C61003B47CF /* AfishaViewController.m in Sources */,
+				936EE3301B2FDBE7001B8F18 /* RepertoireCell.m in Sources */,
 				93C6978F1B2E7C42003B47CF /* ActorsViewController.m in Sources */,
 				936EE31C1B2EA4DB001B8F18 /* ActorsViewCell.m in Sources */,
 				936EE3221B2EC285001B8F18 /* AfishaCell.m in Sources */,
@@ -397,6 +428,7 @@
 				93C697681B2E7848003B47CF /* AppDelegate.m in Sources */,
 				93C697651B2E7848003B47CF /* main.m in Sources */,
 				93C6979E1B2E7C70003B47CF /* RepertoireViewController.m in Sources */,
+				93D9283C1B453858006FF848 /* UIColor+ColorFromHex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

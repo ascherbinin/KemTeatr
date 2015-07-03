@@ -30,6 +30,9 @@
 		93C6979E1B2E7C70003B47CF /* RepertoireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C6979C1B2E7C70003B47CF /* RepertoireViewController.m */; };
 		93C6979F1B2E7C70003B47CF /* RepertoireViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C6979D1B2E7C70003B47CF /* RepertoireViewController.xib */; };
 		93D9283C1B453858006FF848 /* UIColor+ColorFromHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D9283B1B453858006FF848 /* UIColor+ColorFromHex.m */; };
+		93FFA6FC1B4650A800002021 /* EventElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FFA6FB1B4650A800002021 /* EventElement.m */; };
+		93FFA7011B4651ED00002021 /* RDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FFA7001B4651ED00002021 /* RDHelper.m */; };
+		93FFA7041B466BC000002021 /* RepertuarElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FFA7031B466BC000002021 /* RepertuarElement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,12 @@
 		93C6979D1B2E7C70003B47CF /* RepertoireViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepertoireViewController.xib; sourceTree = "<group>"; };
 		93D9283A1B453858006FF848 /* UIColor+ColorFromHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorFromHex.h"; sourceTree = "<group>"; };
 		93D9283B1B453858006FF848 /* UIColor+ColorFromHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorFromHex.m"; sourceTree = "<group>"; };
+		93FFA6FB1B4650A800002021 /* EventElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventElement.m; sourceTree = "<group>"; };
+		93FFA6FD1B4650C300002021 /* EventElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventElement.h; sourceTree = "<group>"; };
+		93FFA6FF1B4651ED00002021 /* RDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDHelper.h; sourceTree = "<group>"; };
+		93FFA7001B4651ED00002021 /* RDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDHelper.m; sourceTree = "<group>"; };
+		93FFA7021B466BC000002021 /* RepertuarElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepertuarElement.h; sourceTree = "<group>"; };
+		93FFA7031B466BC000002021 /* RepertuarElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepertuarElement.m; sourceTree = "<group>"; };
 		EE69CCD1085A35B522F8AF60 /* libPods-KemTeatr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KemTeatr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -166,6 +175,8 @@
 		93C697611B2E7848003B47CF /* KemTeatr */ = {
 			isa = PBXGroup;
 			children = (
+				93FFA6FE1B4651DF00002021 /* Helpers */,
+				93FFA6FA1B46507900002021 /* Models */,
 				93D928351B45374E006FF848 /* Category */,
 				93C6978B1B2E7C07003B47CF /* Repertoire */,
 				93C6978A1B2E7BCB003B47CF /* Afisha */,
@@ -257,6 +268,26 @@
 				93D9283B1B453858006FF848 /* UIColor+ColorFromHex.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		93FFA6FA1B46507900002021 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93FFA6FB1B4650A800002021 /* EventElement.m */,
+				93FFA6FD1B4650C300002021 /* EventElement.h */,
+				93FFA7021B466BC000002021 /* RepertuarElement.h */,
+				93FFA7031B466BC000002021 /* RepertuarElement.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		93FFA6FE1B4651DF00002021 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				93FFA6FF1B4651ED00002021 /* RDHelper.h */,
+				93FFA7001B4651ED00002021 /* RDHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		9E289E3AFDD3B06BC9142168 /* Frameworks */ = {
@@ -419,6 +450,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				936EE3281B2ECECF001B8F18 /* EventsCell.m in Sources */,
+				93FFA7011B4651ED00002021 /* RDHelper.m in Sources */,
+				93FFA6FC1B4650A800002021 /* EventElement.m in Sources */,
+				93FFA7041B466BC000002021 /* RepertuarElement.m in Sources */,
 				93C697991B2E7C61003B47CF /* AfishaViewController.m in Sources */,
 				936EE3301B2FDBE7001B8F18 /* RepertoireCell.m in Sources */,
 				93C6978F1B2E7C42003B47CF /* ActorsViewController.m in Sources */,

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EventsCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *eventImage;
+
 @property (strong, nonatomic) IBOutlet UILabel *titleEvent;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionEvent;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;

@@ -8,17 +8,34 @@
 
 #import "RepertoireViewController.h"
 #import "UIColor+ColorFromHex.h"
+#import "RDHelper.h"
+#import "RepertoireCell.h"
+#import "RepertuarElement.h"
 
 @interface RepertoireViewController ()
-
+{
+    NSMutableArray* _repertoireObjects;
+}
 @end
 
 @implementation RepertoireViewController
 
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        _repertoireObjects = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navBar = [[UINavigationBar alloc]init];
     
     self.navigationItem.title = @"Репертуар";
     NSShadow* shadow = [NSShadow new];
@@ -30,12 +47,17 @@
                                                             NSShadowAttributeName: shadow
                                                             }];
     
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"topBG.png"] forBarMetrics:UIBarMetricsDefault];
+
+    
     
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wallBG.png"]];
     
     
     [self.tableView registerNib:[UINib nibWithNibName:@"RepertoireCell" bundle:nil] forCellReuseIdentifier:@"RepertoireCellID"];
+    
+    [self loadRepertoire];
 
 }
 
@@ -46,12 +68,21 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [_repertoireObjects count];
 }
+
+
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"RepertoireCellID"];
+    RepertoireCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"RepertoireCellID"];
+    
+    RepertuarElement *repElement = _repertoireObjects[indexPath.row];
+    
+    cell.title.text = [NSString stringWithFormat:@"\"%@\"",repElement.repElementName];
+    cell.detail.text  =repElement.repElementDetail;
+    cell.category.text = repElement.repElementCategory;
+    cell.author.text = repElement.repElementAuthor;
     
     return cell;
 }
@@ -61,4 +92,42 @@
     return 320;
 }
 
+-(void)loadRepertoire
+{
+    
+    NSURL *repUrl = [NSURL URLWithString:@"http://www.kemteatr.ru/repertuar/"];
+    
+    
+    NSArray *repNodes = [RDHelper requestData:repUrl xPathQueryStr:@"//div[@class='Repertuarnyj  vz_det']"];
+    
+    if ([repNodes count] == 0)
+        NSLog(@"Нету репертуара");
+    else
+    {
+        NSLog(@"Найдено %lu корневых элементов", (unsigned long)[repNodes count]);
+        
+        [_repertoireObjects addObjectsFromArray:[RDHelper repertoireParsToArray:repNodes]];
+        
+        
+        [self.tableView reloadData];
+        
+    }
+}
+
+
+- (IBAction)segmentValueChanged:(id)sender
+{
+        switch ([sender selectedSegmentIndex]) {
+            case 0:
+                
+                break;
+            case 1:
+                
+                break;
+            case 2:
+                
+            default:
+                break;
+        }
+}
 @end

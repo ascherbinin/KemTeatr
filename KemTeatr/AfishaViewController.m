@@ -28,6 +28,8 @@
                                                             NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.0f],
                                                             NSShadowAttributeName: shadow
                                                             }];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"topBG.png"] forBarMetrics:UIBarMetricsDefault];
+    
 
 
      self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wallBG.png"]];

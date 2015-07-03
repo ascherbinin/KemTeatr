@@ -13,21 +13,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventCircle" id="Krf-X8-MfU">
-                        <rect key="frame" x="12" y="19" width="91" height="91"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YSl-Kh-JGG">
-                        <rect key="frame" x="43" y="37" width="42" height="33"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="34"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="41z-OU-tS5">
-                        <rect key="frame" x="128" y="8" width="185" height="49"/>
+                        <rect key="frame" x="100" y="8" width="213" height="45"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -35,18 +24,28 @@
                         <rect key="frame" x="0.0" y="116" width="320" height="13"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="мая" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nGr-cr-ecw">
-                        <rect key="frame" x="36" y="65" width="56" height="24"/>
+                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventCircle" id="Krf-X8-MfU">
+                        <rect key="frame" x="11" y="19" width="81" height="81"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YSl-Kh-JGG">
+                        <rect key="frame" x="30" y="36" width="42" height="33"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="16"/>
-                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="34"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kh7-ag-zkQ">
-                        <rect key="frame" x="128" y="55" width="185" height="60"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kh7-ag-zkQ">
+                        <rect key="frame" x="100" y="43" width="213" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="мая" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nGr-cr-ecw">
+                        <rect key="frame" x="23" y="64" width="56" height="24"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="16"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -54,8 +53,6 @@
             <connections>
                 <outlet property="dateLabel" destination="YSl-Kh-JGG" id="rfb-Ap-cJP"/>
                 <outlet property="descriptionEvent" destination="kh7-ag-zkQ" id="2iL-Ly-lYq"/>
-                <outlet property="eventImage" destination="Krf-X8-MfU" id="jIj-nh-XeH"/>
-                <outlet property="imageView" destination="Krf-X8-MfU" id="7oo-Ke-kVa"/>
                 <outlet property="mouthLabel" destination="nGr-cr-ecw" id="iVY-cF-Fvh"/>
                 <outlet property="titleEvent" destination="41z-OU-tS5" id="Fgi-om-L8q"/>
             </connections>

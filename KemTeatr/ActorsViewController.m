@@ -19,7 +19,9 @@
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"ActorsViewCell" bundle:nil] forCellWithReuseIdentifier:@"ActorsCell"];
    
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wallBG.png"]];
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,14 +53,5 @@
     return 2;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

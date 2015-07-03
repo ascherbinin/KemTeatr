@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface RepertoireCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *repImageView;
+@property (strong, nonatomic) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UILabel *category;
+@property (strong, nonatomic) IBOutlet UILabel *author;
+@property (strong, nonatomic) IBOutlet UILabel *detail;
 
 @end

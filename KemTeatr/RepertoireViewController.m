@@ -11,6 +11,7 @@
 #import "RDHelper.h"
 #import "RepertoireCell.h"
 #import "RepertuarElement.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface RepertoireViewController ()
 {
@@ -80,16 +81,30 @@
     RepertuarElement *repElement = _repertoireObjects[indexPath.row];
     
     cell.title.text = [NSString stringWithFormat:@"\"%@\"",repElement.repElementName];
-    cell.detail.text  =repElement.repElementDetail;
+    
+    if (repElement.repElementDetail == nil)
+    {
+        cell.detail.text = @"Нет описания";
+    }
+    else
+    {
+        cell.detail.text =repElement.repElementDetail;
+    }
     cell.category.text = repElement.repElementCategory;
     cell.author.text = repElement.repElementAuthor;
+    [cell.repImageView setImageWithURL:repElement.repElementImageURL placeholderImage:[UIImage imageNamed:@"NoActorPhoto.png"]];
     
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     RepertuarElement *repElement = _repertoireObjects[indexPath.row];
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 320;
+    return 305;
 }
 
 -(void)loadRepertoire

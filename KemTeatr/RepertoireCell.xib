@@ -18,7 +18,7 @@
                         <rect key="frame" x="15" y="14" width="97" height="140"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-BG-w2T">
-                        <rect key="frame" x="0.0" y="305" width="320" height="20"/>
+                        <rect key="frame" x="0.0" y="303" width="320" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="MhX-zz-0N4"/>
                         </constraints>
@@ -65,7 +65,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="qQa-BG-w2T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Mzr-av-5iW"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="qQa-BG-w2T" secondAttribute="bottom" constant="-29" id="ccE-9P-GCX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qQa-BG-w2T" secondAttribute="bottom" constant="-27" id="ccE-9P-GCX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="qQa-BG-w2T" secondAttribute="trailing" constant="-8" id="koq-os-I2p"/>
                 </constraints>
             </tableViewCellContentView>

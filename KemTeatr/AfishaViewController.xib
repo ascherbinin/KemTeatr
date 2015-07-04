@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AfishaViewController">
@@ -17,26 +17,29 @@
             <subviews>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OVq-l3-85C">
                     <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="28" id="57o-FK-TjR"/>
-                    </constraints>
                     <segments>
                         <segment title="Сегодня"/>
                         <segment title="Неделя"/>
                         <segment title="Месяц"/>
                     </segments>
+                </segmentedControl>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="wTZ-kA-ca5">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="NXz-nf-WkW"/>
+                    </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="57o-FK-TjR"/>
+                            <exclude reference="NXz-nf-WkW"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="57o-FK-TjR"/>
+                            <include reference="NXz-nf-WkW"/>
                         </mask>
                     </variation>
-                </segmentedControl>
-                <tableView opaque="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="26F-7t-lq3">
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="26F-7t-lq3">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="l5K-Ze-O6B"/>
@@ -46,46 +49,65 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="OVq-l3-85C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="7bU-Ir-egS"/>
-                <constraint firstAttribute="trailing" secondItem="OVq-l3-85C" secondAttribute="trailing" constant="22" id="AyM-qU-kg5"/>
-                <constraint firstItem="OVq-l3-85C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="46" id="SZ5-rY-gTA">
-                    <variation key="heightClass=regular-widthClass=compact" constant="67"/>
+                <constraint firstItem="OVq-l3-85C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="4eh-W0-Prs"/>
+                <constraint firstAttribute="trailing" secondItem="26F-7t-lq3" secondAttribute="trailing" id="812-FQ-DBO"/>
+                <constraint firstItem="26F-7t-lq3" firstAttribute="top" secondItem="OVq-l3-85C" secondAttribute="bottom" constant="10" id="Hf3-hc-2hp">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                 </constraint>
-                <constraint firstItem="26F-7t-lq3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="da5-PP-NpA"/>
-                <constraint firstItem="26F-7t-lq3" firstAttribute="top" secondItem="OVq-l3-85C" secondAttribute="bottom" constant="10" id="sVl-Up-qyj"/>
-                <constraint firstAttribute="trailing" secondItem="26F-7t-lq3" secondAttribute="trailing" id="wt9-zK-vuh"/>
-                <constraint firstAttribute="bottom" secondItem="26F-7t-lq3" secondAttribute="bottom" id="zCB-M1-Kzc"/>
+                <constraint firstAttribute="bottom" secondItem="26F-7t-lq3" secondAttribute="bottom" id="PTx-6T-SDB"/>
+                <constraint firstItem="wTZ-kA-ca5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VZz-tM-9vd"/>
+                <constraint firstAttribute="trailing" secondItem="wTZ-kA-ca5" secondAttribute="trailing" id="ZSK-YY-f2f"/>
+                <constraint firstItem="wTZ-kA-ca5" firstAttribute="top" secondItem="OVq-l3-85C" secondAttribute="bottom" constant="1" id="fuU-BT-gFF">
+                    <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                </constraint>
+                <constraint firstItem="OVq-l3-85C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="jrd-Ke-nhf"/>
+                <constraint firstAttribute="trailing" secondItem="OVq-l3-85C" secondAttribute="trailing" constant="22" id="mdP-fK-PJW"/>
+                <constraint firstItem="wTZ-kA-ca5" firstAttribute="top" secondItem="OVq-l3-85C" secondAttribute="bottom" constant="1" id="wng-Wm-ioO"/>
+                <constraint firstItem="26F-7t-lq3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yor-0Q-KO3"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="OVq-l3-85C"/>
+                    <exclude reference="wTZ-kA-ca5"/>
                     <exclude reference="26F-7t-lq3"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="7bU-Ir-egS"/>
-                    <exclude reference="AyM-qU-kg5"/>
-                    <exclude reference="SZ5-rY-gTA"/>
-                    <exclude reference="da5-PP-NpA"/>
-                    <exclude reference="sVl-Up-qyj"/>
-                    <exclude reference="wt9-zK-vuh"/>
-                    <exclude reference="zCB-M1-Kzc"/>
+                    <exclude reference="4eh-W0-Prs"/>
+                    <exclude reference="jrd-Ke-nhf"/>
+                    <exclude reference="mdP-fK-PJW"/>
+                    <exclude reference="VZz-tM-9vd"/>
+                    <exclude reference="ZSK-YY-f2f"/>
+                    <exclude reference="fuU-BT-gFF"/>
+                    <exclude reference="wng-Wm-ioO"/>
+                    <exclude reference="812-FQ-DBO"/>
+                    <exclude reference="Hf3-hc-2hp"/>
+                    <exclude reference="PTx-6T-SDB"/>
+                    <exclude reference="yor-0Q-KO3"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="OVq-l3-85C"/>
+                    <include reference="wTZ-kA-ca5"/>
                     <include reference="26F-7t-lq3"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="7bU-Ir-egS"/>
-                    <include reference="AyM-qU-kg5"/>
-                    <include reference="SZ5-rY-gTA"/>
-                    <include reference="da5-PP-NpA"/>
-                    <include reference="sVl-Up-qyj"/>
-                    <include reference="wt9-zK-vuh"/>
-                    <include reference="zCB-M1-Kzc"/>
+                    <include reference="4eh-W0-Prs"/>
+                    <include reference="jrd-Ke-nhf"/>
+                    <include reference="mdP-fK-PJW"/>
+                    <include reference="VZz-tM-9vd"/>
+                    <include reference="ZSK-YY-f2f"/>
+                    <include reference="fuU-BT-gFF"/>
+                    <exclude reference="wng-Wm-ioO"/>
+                    <include reference="812-FQ-DBO"/>
+                    <include reference="Hf3-hc-2hp"/>
+                    <include reference="PTx-6T-SDB"/>
+                    <include reference="yor-0Q-KO3"/>
                 </mask>
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="shadow" width="628" height="21"/>
+    </resources>
 </document>

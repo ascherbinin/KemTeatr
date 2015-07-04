@@ -36,24 +36,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationItem.title = @"Наши события";
-    NSShadow* shadow = [NSShadow new];
-    shadow.shadowOffset = CGSizeMake(0.5f, 1.0f);
-    shadow.shadowColor = [UIColor lightGrayColor];
-    [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            NSForegroundColorAttributeName: [UIColor colorWithHexString:@"995733"],
-                                                            NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.0f],
-                                                            NSShadowAttributeName: shadow
-                                                            }];
-    
+
+    self.navigationItem.title = @"События";
     
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wallBG.png"]];
-    
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"topBG.png"] forBarMetrics:UIBarMetricsDefault];
-    
-
     
     [self.tableView registerNib:[UINib nibWithNibName:@"EventsCell" bundle:nil] forCellReuseIdentifier:@"EventsCellID"];
     

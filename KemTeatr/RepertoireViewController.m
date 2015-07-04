@@ -16,6 +16,9 @@
 @interface RepertoireViewController ()
 {
     NSMutableArray* _repertoireObjects;
+    NSMutableArray* _matureObjects;
+    NSMutableArray* _kidObjects;
+    NSMutableArray* _amatureObjects;
 }
 @end
 
@@ -27,7 +30,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        _repertoireObjects = [[NSMutableArray alloc] init];
+        _repertoireObjects = [NSMutableArray new];
+        _matureObjects = [NSMutableArray new];
+        _kidObjects = [NSMutableArray new];
+        _amatureObjects = [NSMutableArray new];
     }
     
     return self;
@@ -39,17 +45,6 @@
     
     
     self.navigationItem.title = @"Репертуар";
-    NSShadow* shadow = [NSShadow new];
-    shadow.shadowOffset = CGSizeMake(0.5f, 1.0f);
-    shadow.shadowColor = [UIColor lightGrayColor];
-    [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            NSForegroundColorAttributeName: [UIColor colorWithHexString: @"995733"],
-                                                            NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.0f],
-                                                            NSShadowAttributeName: shadow
-                                                            }];
-    
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"topBG.png"] forBarMetrics:UIBarMetricsDefault];
-
     
     
     
@@ -69,7 +64,21 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_repertoireObjects count];
+    switch ([self.segmentController selectedSegmentIndex]) {
+        case 0:
+            return [_matureObjects count];
+            break;
+        case 1:
+            return [_amatureObjects count];
+            break;
+        case 2:
+            return [_kidObjects count];
+        default:
+            return [_repertoireObjects count];
+            break;
+    }
+
+    
 }
 
 
@@ -78,7 +87,21 @@
 {
     RepertoireCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"RepertoireCellID"];
     
-    RepertuarElement *repElement = _repertoireObjects[indexPath.row];
+    RepertuarElement *repElement;
+    
+    switch ([self.segmentController selectedSegmentIndex]) {
+        case 0:
+            repElement = _matureObjects[indexPath.row];
+            break;
+        case 1:
+            repElement = _amatureObjects[indexPath.row];
+            break;
+        case 2:
+            repElement = _kidObjects[indexPath.row];
+        default:
+            break;
+    }
+
     
     cell.title.text = [NSString stringWithFormat:@"\"%@\"",repElement.repElementName];
     
@@ -97,10 +120,7 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-     RepertuarElement *repElement = _repertoireObjects[indexPath.row];
-}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -122,7 +142,22 @@
         NSLog(@"Найдено %lu корневых элементов", (unsigned long)[repNodes count]);
         
         [_repertoireObjects addObjectsFromArray:[RDHelper repertoireParsToArray:repNodes]];
-        
+
+        for (RepertuarElement *object in _repertoireObjects) {
+            if(object.repCat == categoryMature)
+            {
+                [_matureObjects addObject:object];
+            }
+            else if(object.repCat == categoryKids)
+            {
+                [_kidObjects addObject:object];
+            }
+            else
+            {
+                 [_amatureObjects addObject:object];
+            }
+
+        }
         
         [self.tableView reloadData];
         
@@ -132,17 +167,6 @@
 
 - (IBAction)segmentValueChanged:(id)sender
 {
-        switch ([sender selectedSegmentIndex]) {
-            case 0:
-                
-                break;
-            case 1:
-                
-                break;
-            case 2:
-                
-            default:
-                break;
-        }
+    [self.tableView reloadData];
 }
 @end

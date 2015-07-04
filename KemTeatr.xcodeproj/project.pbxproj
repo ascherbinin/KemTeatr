@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		930BDF9C3713B21D9968A1F6 /* libPods-KemTeatr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE69CCD1085A35B522F8AF60 /* libPods-KemTeatr.a */; };
+		3C345A90833AC5737902B23F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAEF8D9D3E9AF1C94D6FC41 /* libPods.a */; };
+		84CE44931B47D59100BFE8BC /* ActorElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CE44921B47D59100BFE8BC /* ActorElement.m */; };
+		84CE44961B47F63900BFE8BC /* CALayer+RuntimeAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CE44951B47F63900BFE8BC /* CALayer+RuntimeAttribute.m */; };
 		936EE31C1B2EA4DB001B8F18 /* ActorsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EE31A1B2EA4DB001B8F18 /* ActorsViewCell.m */; };
 		936EE31D1B2EA4DB001B8F18 /* ActorsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936EE31B1B2EA4DB001B8F18 /* ActorsViewCell.xib */; };
 		936EE3221B2EC285001B8F18 /* AfishaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EE3201B2EC285001B8F18 /* AfishaCell.m */; };
@@ -46,8 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		69306FFE86E32C23E72EA05F /* Pods-KemTeatr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KemTeatr.release.xcconfig"; path = "Pods/Target Support Files/Pods-KemTeatr/Pods-KemTeatr.release.xcconfig"; sourceTree = "<group>"; };
-		91D24643EA1A6215B06CE425 /* Pods-KemTeatr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KemTeatr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KemTeatr/Pods-KemTeatr.debug.xcconfig"; sourceTree = "<group>"; };
+		43AD058DDFE6EEA451458426 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7AAEF8D9D3E9AF1C94D6FC41 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CE44911B47D59100BFE8BC /* ActorElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorElement.h; sourceTree = "<group>"; };
+		84CE44921B47D59100BFE8BC /* ActorElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorElement.m; sourceTree = "<group>"; };
+		84CE44941B47F63900BFE8BC /* CALayer+RuntimeAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+RuntimeAttribute.h"; sourceTree = "<group>"; };
+		84CE44951B47F63900BFE8BC /* CALayer+RuntimeAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+RuntimeAttribute.m"; sourceTree = "<group>"; };
 		936EE3191B2EA4DB001B8F18 /* ActorsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorsViewCell.h; sourceTree = "<group>"; };
 		936EE31A1B2EA4DB001B8F18 /* ActorsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorsViewCell.m; sourceTree = "<group>"; };
 		936EE31B1B2EA4DB001B8F18 /* ActorsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorsViewCell.xib; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 		93FFA7001B4651ED00002021 /* RDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDHelper.m; sourceTree = "<group>"; };
 		93FFA7021B466BC000002021 /* RepertuarElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepertuarElement.h; sourceTree = "<group>"; };
 		93FFA7031B466BC000002021 /* RepertuarElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepertuarElement.m; sourceTree = "<group>"; };
+		E8005BD34E4C5AE8FD56948B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EE69CCD1085A35B522F8AF60 /* libPods-KemTeatr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KemTeatr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930BDF9C3713B21D9968A1F6 /* libPods-KemTeatr.a in Frameworks */,
+				3C345A90833AC5737902B23F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92AE27829ED6E6D7E7299A46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43AD058DDFE6EEA451458426 /* Pods.debug.xcconfig */,
+				E8005BD34E4C5AE8FD56948B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		936EE3181B2EA4B9001B8F18 /* ActorsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +174,8 @@
 				93C697611B2E7848003B47CF /* KemTeatr */,
 				93C6977B1B2E7848003B47CF /* KemTeatrTests */,
 				93C697601B2E7848003B47CF /* Products */,
-				FAF53D8B919403F0215DBE97 /* Pods */,
 				9E289E3AFDD3B06BC9142168 /* Frameworks */,
+				92AE27829ED6E6D7E7299A46 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +282,8 @@
 			children = (
 				93D9283A1B453858006FF848 /* UIColor+ColorFromHex.h */,
 				93D9283B1B453858006FF848 /* UIColor+ColorFromHex.m */,
+				84CE44941B47F63900BFE8BC /* CALayer+RuntimeAttribute.h */,
+				84CE44951B47F63900BFE8BC /* CALayer+RuntimeAttribute.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -277,6 +295,8 @@
 				93FFA6FD1B4650C300002021 /* EventElement.h */,
 				93FFA7021B466BC000002021 /* RepertuarElement.h */,
 				93FFA7031B466BC000002021 /* RepertuarElement.m */,
+				84CE44911B47D59100BFE8BC /* ActorElement.h */,
+				84CE44921B47D59100BFE8BC /* ActorElement.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -294,17 +314,9 @@
 			isa = PBXGroup;
 			children = (
 				EE69CCD1085A35B522F8AF60 /* libPods-KemTeatr.a */,
+				7AAEF8D9D3E9AF1C94D6FC41 /* libPods.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FAF53D8B919403F0215DBE97 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				91D24643EA1A6215B06CE425 /* Pods-KemTeatr.debug.xcconfig */,
-				69306FFE86E32C23E72EA05F /* Pods-KemTeatr.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +326,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93C697821B2E7849003B47CF /* Build configuration list for PBXNativeTarget "KemTeatr" */;
 			buildPhases = (
-				1A83343D8EB99CBE662B49D0 /* Check Pods Manifest.lock */,
+				EF782D267F95BA0624DAB114 /* Check Pods Manifest.lock */,
 				93C6975B1B2E7848003B47CF /* Sources */,
 				93C6975C1B2E7848003B47CF /* Frameworks */,
 				93C6975D1B2E7848003B47CF /* Resources */,
@@ -412,21 +424,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A83343D8EB99CBE662B49D0 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		6D1AE9448FBC27EB0992E6AE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,7 +436,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KemTeatr/Pods-KemTeatr-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF782D267F95BA0624DAB114 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -457,6 +469,8 @@
 				936EE3301B2FDBE7001B8F18 /* RepertoireCell.m in Sources */,
 				93C6978F1B2E7C42003B47CF /* ActorsViewController.m in Sources */,
 				936EE31C1B2EA4DB001B8F18 /* ActorsViewCell.m in Sources */,
+				84CE44931B47D59100BFE8BC /* ActorElement.m in Sources */,
+				84CE44961B47F63900BFE8BC /* CALayer+RuntimeAttribute.m in Sources */,
 				936EE3221B2EC285001B8F18 /* AfishaCell.m in Sources */,
 				93C697941B2E7C52003B47CF /* EventsViewController.m in Sources */,
 				93C697681B2E7848003B47CF /* AppDelegate.m in Sources */,
@@ -578,7 +592,7 @@
 		};
 		93C697831B2E7849003B47CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91D24643EA1A6215B06CE425 /* Pods-KemTeatr.debug.xcconfig */;
+			baseConfigurationReference = 43AD058DDFE6EEA451458426 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = KemTeatr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -588,7 +602,7 @@
 		};
 		93C697841B2E7849003B47CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69306FFE86E32C23E72EA05F /* Pods-KemTeatr.release.xcconfig */;
+			baseConfigurationReference = E8005BD34E4C5AE8FD56948B /* Pods.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = KemTeatr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

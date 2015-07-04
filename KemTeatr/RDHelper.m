@@ -10,6 +10,7 @@
 #import "TFHpple.h"
 #import "EventElement.h"
 #import "RepertuarElement.h"
+#import "ActorElement.h"
 
 @interface RDHelper : NSObject
 
@@ -95,13 +96,58 @@
         
         repElement.repElementDetail = [[[[mainElement firstChildWithClassName:@"r_name"] firstChildWithClassName:@"r_name3"]firstChildWithTagName:@"p"]text];
         
-        repElement.repElementCategory = [[[[mainElement firstChildWithClassName:@"r_description"] firstChildWithClassName:@"r_type"] firstChildWithTagName:@"a" ] text];
+        NSString* category = [[[[mainElement firstChildWithClassName:@"r_description"] firstChildWithClassName:@"r_type"] firstChildWithTagName:@"a" ] text];
         
-       // repElement.repCat =
+        repElement.repElementCategory = category;
+        
+        
+        if ([category isEqualToString:@" Спектакль для взрослых"]) {
+            repElement.repCat = categoryMature;
+        }
+        else if ([category isEqualToString:@" Спектакль для детей"])
+        {
+            repElement.repCat = categoryKids;
+        }
+        else if ([category isEqualToString:@" Спектакль для подростков"])
+        {
+            repElement.repCat = categoryAmature;
+        }
+        
 
         
         
         [tempMArray addObject:repElement];
+    }
+    
+    return tempMArray;
+}
+
++(NSMutableArray*)actorsParsToArray:(NSArray*)arrayToPars
+{
+    NSMutableArray *tempMArray = [[NSMutableArray alloc]init];
+    
+    for (TFHppleElement *element in arrayToPars){
+        
+        
+        ActorElement *actorElement = [[ActorElement alloc]init];
+        
+        
+        actorElement.actorElementFullInfoURL = [NSURL URLWithString:[[element firstChildWithTagName:@"a"] objectForKey:@"href"]];
+        
+        TFHppleElement *imageRepElement =[[element firstChildWithTagName:@"a"] firstChildWithClassName:@"one_pimg"] ;
+        
+        NSString* imageUrlInSite = [[[imageRepElement firstChildWithTagName:@"img" ] objectForKey:@"src"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        actorElement.actorElementImageURL = [NSURL URLWithString:[NSString stringWithFormat:@"www.kemteatr.ru/%@",imageUrlInSite]];
+        
+        actorElement.actorElementName = [[[[element firstChildWithTagName:@"a"] firstChildWithClassName:@"wow_pimg"] firstChildWithClassName:@"name"]text];
+        
+        actorElement.actorElementPosition = [[[[element firstChildWithTagName:@"a"] firstChildWithClassName:@"wow_pimg"] firstChildWithClassName:@"title"]text];
+
+        
+        
+        
+        [tempMArray addObject:actorElement];
     }
     
     return tempMArray;

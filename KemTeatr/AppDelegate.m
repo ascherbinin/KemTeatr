@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+ColorFromHex.h"
 
 
 @interface AppDelegate ()
@@ -28,6 +29,15 @@
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     NSInteger tagID = 0;
     
+    NSShadow* shadow = [NSShadow new];
+    shadow.shadowOffset = CGSizeMake(0.5f, 1.0f);
+    shadow.shadowColor = [UIColor lightGrayColor];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSForegroundColorAttributeName: [UIColor colorWithHexString:@"995733"],
+                                                            NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.0f],
+                                                            NSShadowAttributeName: shadow
+                                                            }];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"topBG.png"] forBarMetrics:UIBarMetricsDefault];
     
     ActorsViewController *actorsVC = [ActorsViewController new];
     EventsViewController *eventVC = [EventsViewController new];
@@ -39,27 +49,27 @@
     self.actorsNav = [[UINavigationController alloc] initWithRootViewController:actorsVC];
     self.actorsNav.tabBarItem =
     [[UITabBarItem alloc] initWithTitle:@"Актеры"
-                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                  image:[UIImage imageNamed:@"actorsIcon"]
                                     tag:tagID++];
     
     //Event Section
     self.eventsNav = [[UINavigationController alloc] initWithRootViewController:eventVC];
     self.eventsNav.tabBarItem =
     [[UITabBarItem alloc] initWithTitle:@"События"
-                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                  image:[UIImage imageNamed:@"eventsIcon"]
                                     tag:tagID++];
     
     //Repertoire Section
     self.repertoireNav = [[UINavigationController alloc] initWithRootViewController:repertoireVC];
     self.repertoireNav.tabBarItem =
     [[UITabBarItem alloc] initWithTitle:@"Репертуар"
-                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                  image:[UIImage imageNamed:@"repIcon"]
                                     tag:tagID++];
     //Afisha Section
     self.afishaNav = [[UINavigationController alloc] initWithRootViewController:afishaVC];
     self.afishaNav.tabBarItem =
     [[UITabBarItem alloc] initWithTitle:@"Афиша"
-                                  image:[UIImage imageNamed:@"main-icon-norm-1"]
+                                  image:[UIImage imageNamed:@"afishaIcon"]
                                     tag:tagID++];
     
  

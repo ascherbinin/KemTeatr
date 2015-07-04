@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -20,13 +20,25 @@
                             <constraint firstAttribute="height" constant="13" id="aCW-iG-Y3j"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQj-CL-JMd">
+                        <rect key="frame" x="8" y="51" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.3411764705882353" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="A6G-bD-sox" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="7ys-ef-ojW"/>
+                    <constraint firstItem="fQj-CL-JMd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Geu-Rl-7xS"/>
+                    <constraint firstItem="fQj-CL-JMd" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="MuQ-pZ-3W0"/>
                     <constraint firstAttribute="trailingMargin" secondItem="A6G-bD-sox" secondAttribute="trailing" constant="-8" id="ePi-6E-fLL"/>
                     <constraint firstAttribute="bottomMargin" secondItem="A6G-bD-sox" secondAttribute="bottom" constant="-21" id="egN-KU-Gmy"/>
+                    <constraint firstAttribute="centerY" secondItem="fQj-CL-JMd" secondAttribute="centerY" id="qbU-IK-haw"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="title" destination="fQj-CL-JMd" id="g50-2o-7lt"/>
+            </connections>
             <point key="canvasLocation" x="262" y="444.5"/>
         </tableViewCell>
     </objects>

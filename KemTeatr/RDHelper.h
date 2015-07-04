@@ -15,5 +15,6 @@
 
 +(NSMutableArray*)eventsParsToArray:(NSArray*)arrayToPars;
 +(NSMutableArray*)repertoireParsToArray:(NSArray*)arrayToPars;
++(NSMutableArray*)actorsParsToArray:(NSArray*)arrayToPars;
 
 @end

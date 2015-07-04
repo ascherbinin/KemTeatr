@@ -6,9 +6,11 @@
 //  Copyright (c) 2015 Andrey Scherbinin. All rights reserved.
 //
 
-typedef enum repCategory{
-    mature,amature,kids
-}repCategory;
+typedef enum EnumRepCategory{
+    categoryMature,
+    categoryAmature,
+    categoryKids
+}EnumRepCategory;
 
 #import <Foundation/Foundation.h>
 
@@ -20,7 +22,7 @@ typedef enum repCategory{
 @property (nonatomic,strong) NSString* repElementCategory;
 @property (nonatomic,strong) NSURL* repElementImageURL;
 @property (nonatomic,strong) NSURL* repElementFullTextURL;
-@property (nonatomic,assign) repCategory repCat;
+@property (nonatomic,assign) EnumRepCategory repCat;
 
 
 @end

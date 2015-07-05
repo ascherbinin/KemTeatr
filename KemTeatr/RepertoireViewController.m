@@ -13,12 +13,19 @@
 #import "RepertuarElement.h"
 #import "UIImageView+AFNetworking.h"
 
+
+
 @interface RepertoireViewController ()
 {
     NSMutableArray* _repertoireObjects;
     NSMutableArray* _matureObjects;
     NSMutableArray* _kidObjects;
     NSMutableArray* _amatureObjects;
+    
+    NSMutableArray *_uniqueRep;
+    
+    
+    
 }
 @end
 
@@ -34,6 +41,7 @@
         _matureObjects = [NSMutableArray new];
         _kidObjects = [NSMutableArray new];
         _amatureObjects = [NSMutableArray new];
+        _uniqueRep = [NSMutableArray new];
     }
     
     return self;
@@ -81,7 +89,28 @@
     
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RepertuarElement *repElement;
+    
+    switch ([self.segmentController selectedSegmentIndex]) {
+        case 0:
+            repElement = _matureObjects[indexPath.row];
+            break;
+        case 1:
+            repElement = _amatureObjects[indexPath.row];
+            break;
+        case 2:
+            repElement = _kidObjects[indexPath.row];
+        default:
+            break;
+    }
+    
+    RepertoireFullViewController* repertoireVC = [[RepertoireFullViewController alloc] initWithURL:repElement.repElementFullTextURL];
+    [self.navigationController presentViewController:repertoireVC animated:YES completion:nil];
+    
+    
+}
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -141,25 +170,40 @@
     {
         NSLog(@"Найдено %lu корневых элементов", (unsigned long)[repNodes count]);
         
+        dispatch_queue_t myQueue = dispatch_queue_create("My Queue",NULL);
+        dispatch_async(myQueue, ^{
+        
         [_repertoireObjects addObjectsFromArray:[RDHelper repertoireParsToArray:repNodes]];
 
-        for (RepertuarElement *object in _repertoireObjects) {
-            if(object.repCat == categoryMature)
+            for (RepertuarElement* item in _repertoireObjects)
             {
-                [_matureObjects addObject:object];
+                if (![_uniqueRep containsObject:item]) {
+                    [_uniqueRep addObject:item];
+                };
             }
-            else if(object.repCat == categoryKids)
-            {
-                [_kidObjects addObject:object];
-            }
-            else
-            {
-                 [_amatureObjects addObject:object];
-            }
-
-        }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                for (RepertuarElement *object in _uniqueRep) {
+                    if(object.repCat == categoryMature)
+                    {
+                        [_matureObjects addObject:object];
+                    }
+                    else if(object.repCat == categoryKids)
+                    {
+                        [_kidObjects addObject:object];
+                    }
+                    else
+                    {
+                        [_amatureObjects addObject:object];
+                    }
+                    
+                }
+                
+                [self.tableView reloadData];            });
+        });
+            
         
-        [self.tableView reloadData];
         
     }
 }

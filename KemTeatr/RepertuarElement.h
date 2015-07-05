@@ -24,5 +24,5 @@ typedef enum EnumRepCategory{
 @property (nonatomic,strong) NSURL* repElementFullTextURL;
 @property (nonatomic,assign) EnumRepCategory repCat;
 
-
+- (BOOL)isEqualToRepElement:(RepertuarElement *)element;
 @end

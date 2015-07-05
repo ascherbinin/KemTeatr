@@ -90,10 +90,17 @@
     {
         NSLog(@"Найдено %lu корневых элементов", (unsigned long)[eventsNodes count]);
         
+        dispatch_queue_t myQueue = dispatch_queue_create("My Queue",NULL);
+        dispatch_async(myQueue, ^{
+            
         [_eventsObjects addObjectsFromArray:[RDHelper eventsParsToArray:eventsNodes]];
         
+             dispatch_async(dispatch_get_main_queue(), ^{
         
         [self.tableView reloadData];
+             });
+        });
+
         
     }
 }

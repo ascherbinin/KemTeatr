@@ -16,13 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fV0-7L-ePd">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="NWf-uK-d6w"/>
-                        <outlet property="delegate" destination="-1" id="Dhh-ZC-BJj"/>
-                    </connections>
-                </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="23y-dq-e7w">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <constraints>
@@ -50,12 +43,19 @@
                         <action selector="segmentValueChanged:" destination="-1" eventType="valueChanged" id="Rfy-cT-Fyz"/>
                     </connections>
                 </segmentedControl>
+                <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fV0-7L-ePd">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="NWf-uK-d6w"/>
+                        <outlet property="delegate" destination="-1" id="Dhh-ZC-BJj"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="23y-dq-e7w" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="14H-kS-bN6"/>
                 <constraint firstItem="fV0-7L-ePd" firstAttribute="top" secondItem="ZYG-tF-CzW" secondAttribute="bottom" constant="10" id="33B-Ag-D99">
-                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
                 <constraint firstItem="fV0-7L-ePd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E0E-k6-aj6"/>
                 <constraint firstAttribute="trailing" secondItem="ZYG-tF-CzW" secondAttribute="trailing" constant="8" id="Exh-2D-RLl"/>
@@ -64,7 +64,7 @@
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="23y-dq-e7w" secondAttribute="trailing" id="VA6-3G-dY1"/>
                 <constraint firstAttribute="bottom" secondItem="fV0-7L-ePd" secondAttribute="bottom" constant="8" id="dZ7-hh-C79">
-                    <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                 </constraint>
                 <constraint firstItem="ZYG-tF-CzW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gKD-yd-Vol"/>
                 <constraint firstItem="23y-dq-e7w" firstAttribute="top" secondItem="ZYG-tF-CzW" secondAttribute="bottom" id="gyw-Kc-5ih">
@@ -72,11 +72,13 @@
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="fV0-7L-ePd" secondAttribute="trailing" id="z8k-WO-q39"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="fV0-7L-ePd"/>
                     <exclude reference="23y-dq-e7w"/>
                     <exclude reference="ZYG-tF-CzW"/>
+                    <exclude reference="fV0-7L-ePd"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="Exh-2D-RLl"/>
@@ -93,9 +95,9 @@
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="fV0-7L-ePd"/>
                     <include reference="23y-dq-e7w"/>
                     <include reference="ZYG-tF-CzW"/>
+                    <include reference="fV0-7L-ePd"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="Exh-2D-RLl"/>

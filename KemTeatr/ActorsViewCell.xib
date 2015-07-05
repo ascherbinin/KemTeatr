@@ -24,6 +24,9 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="130" id="8Ub-JF-6eg"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -38,7 +41,7 @@
                 <constraint firstAttribute="bottom" secondItem="git-dc-FES" secondAttribute="bottom" constant="5" id="tnb-6A-0pP"/>
             </constraints>
             <connections>
-                <outlet property="imageView" destination="5EI-Ff-oRQ" id="534-hF-oXQ"/>
+                <outlet property="actorsImage" destination="5EI-Ff-oRQ" id="YAi-0w-rrh"/>
                 <outlet property="nameLabel" destination="git-dc-FES" id="ned-X5-fBF"/>
             </connections>
         </collectionViewCell>

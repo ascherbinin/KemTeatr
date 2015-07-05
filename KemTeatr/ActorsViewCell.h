@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ActorsViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *actorsImage;
 
 @end

@@ -10,6 +10,8 @@
 		3C345A90833AC5737902B23F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAEF8D9D3E9AF1C94D6FC41 /* libPods.a */; };
 		84CE44931B47D59100BFE8BC /* ActorElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CE44921B47D59100BFE8BC /* ActorElement.m */; };
 		84CE44961B47F63900BFE8BC /* CALayer+RuntimeAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CE44951B47F63900BFE8BC /* CALayer+RuntimeAttribute.m */; };
+		84D70A891B48F997000BA3A5 /* RepertoireFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D70A871B48F997000BA3A5 /* RepertoireFullViewController.m */; };
+		84D70A8A1B48F997000BA3A5 /* RepertoireFullViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D70A881B48F997000BA3A5 /* RepertoireFullViewController.xib */; };
 		936EE31C1B2EA4DB001B8F18 /* ActorsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EE31A1B2EA4DB001B8F18 /* ActorsViewCell.m */; };
 		936EE31D1B2EA4DB001B8F18 /* ActorsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936EE31B1B2EA4DB001B8F18 /* ActorsViewCell.xib */; };
 		936EE3221B2EC285001B8F18 /* AfishaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EE3201B2EC285001B8F18 /* AfishaCell.m */; };
@@ -54,6 +56,9 @@
 		84CE44921B47D59100BFE8BC /* ActorElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorElement.m; sourceTree = "<group>"; };
 		84CE44941B47F63900BFE8BC /* CALayer+RuntimeAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+RuntimeAttribute.h"; sourceTree = "<group>"; };
 		84CE44951B47F63900BFE8BC /* CALayer+RuntimeAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+RuntimeAttribute.m"; sourceTree = "<group>"; };
+		84D70A861B48F997000BA3A5 /* RepertoireFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepertoireFullViewController.h; sourceTree = "<group>"; };
+		84D70A871B48F997000BA3A5 /* RepertoireFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepertoireFullViewController.m; sourceTree = "<group>"; };
+		84D70A881B48F997000BA3A5 /* RepertoireFullViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepertoireFullViewController.xib; sourceTree = "<group>"; };
 		936EE3191B2EA4DB001B8F18 /* ActorsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorsViewCell.h; sourceTree = "<group>"; };
 		936EE31A1B2EA4DB001B8F18 /* ActorsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorsViewCell.m; sourceTree = "<group>"; };
 		936EE31B1B2EA4DB001B8F18 /* ActorsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorsViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +124,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84D70A851B48F951000BA3A5 /* RepertoireFull */ = {
+			isa = PBXGroup;
+			children = (
+				84D70A861B48F997000BA3A5 /* RepertoireFullViewController.h */,
+				84D70A871B48F997000BA3A5 /* RepertoireFullViewController.m */,
+				84D70A881B48F997000BA3A5 /* RepertoireFullViewController.xib */,
+			);
+			name = RepertoireFull;
+			sourceTree = "<group>";
+		};
 		92AE27829ED6E6D7E7299A46 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +284,7 @@
 		93C6978B1B2E7C07003B47CF /* Repertoire */ = {
 			isa = PBXGroup;
 			children = (
+				84D70A851B48F951000BA3A5 /* RepertoireFull */,
 				936EE32C1B2FDBCE001B8F18 /* RepertoireCell */,
 				93C6979B1B2E7C70003B47CF /* RepertoireViewController.h */,
 				93C6979C1B2E7C70003B47CF /* RepertoireViewController.m */,
@@ -406,6 +422,7 @@
 				936EE3311B2FDBE7001B8F18 /* RepertoireCell.xib in Resources */,
 				93C697951B2E7C52003B47CF /* EventsViewController.xib in Resources */,
 				936EE3231B2EC285001B8F18 /* AfishaCell.xib in Resources */,
+				84D70A8A1B48F997000BA3A5 /* RepertoireFullViewController.xib in Resources */,
 				93C6979F1B2E7C70003B47CF /* RepertoireViewController.xib in Resources */,
 				936EE31D1B2EA4DB001B8F18 /* ActorsViewCell.xib in Resources */,
 				93C697731B2E7848003B47CF /* LaunchScreen.xib in Resources */,
@@ -475,6 +492,7 @@
 				93C697941B2E7C52003B47CF /* EventsViewController.m in Sources */,
 				93C697681B2E7848003B47CF /* AppDelegate.m in Sources */,
 				93C697651B2E7848003B47CF /* main.m in Sources */,
+				84D70A891B48F997000BA3A5 /* RepertoireFullViewController.m in Sources */,
 				93C6979E1B2E7C70003B47CF /* RepertoireViewController.m in Sources */,
 				93D9283C1B453858006FF848 /* UIColor+ColorFromHex.m in Sources */,
 			);

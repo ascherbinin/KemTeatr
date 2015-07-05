@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RepertoireFullViewController.h"
 
 @interface RepertoireViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentController;
 - (IBAction)segmentValueChanged:(id)sender;
+
 
 @end

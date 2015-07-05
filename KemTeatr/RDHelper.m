@@ -84,7 +84,7 @@
    
         TFHppleElement *mainElement = [element firstChildWithClassName:@"r_med"];
         
-        repElement.repElementFullTextURL = [NSURL URLWithString:[[mainElement firstChildWithTagName:@"a"] objectForKey:@"href"]];
+        repElement.repElementFullTextURL = [NSURL URLWithString:[NSString stringWithFormat:@"www.kemteatr.ru/%@",[[mainElement firstChildWithTagName:@"a"] objectForKey:@"href"]]];
         
         TFHppleElement *imageRepElement =[[mainElement firstChildWithTagName:@"a" ] firstChildWithClassName:@"s_image"] ;
         
@@ -151,6 +151,24 @@
     }
     
     return tempMArray;
+}
+
++(NSString*)repFullParsToArray:(NSArray*)arrayToPars
+{
+    NSMutableString *tempStr = [NSMutableString new];
+    
+    for (TFHppleElement *element in arrayToPars){
+        
+        
+        NSString* mainStr = [element content];
+        
+        
+        
+        
+        [tempStr appendString:mainStr];
+    }
+    
+    return tempStr;
 }
 
 

@@ -57,13 +57,8 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if(section ==0)
-    {
-       return 1;
-    }
-    else {
-        return [_actorsObjects count]-1;
-    }
+  
+        return [_actorsObjects count];
     
 }
 
@@ -74,7 +69,12 @@
     ActorElement *actor = _actorsObjects[indexPath.row];
     
     NSLog(@"%@",actor.actorElementImageURL);
-    [cell.imageView setImageWithURL:actor.actorElementImageURL placeholderImage:[UIImage imageNamed:@"NoActorPhoto.png"]];
+   
+    
+    [cell.actorsImage setImageWithURL:actor.actorElementImageURL placeholderImage:[UIImage imageNamed:@"NoActorPhoto.png"]];
+    
+    [cell.actorsImage setNeedsLayout];
+     
     
     cell.nameLabel.text = actor.actorElementName;
     
@@ -83,7 +83,7 @@
 
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return 1;
 }
 
 -(void)loadActors
@@ -100,7 +100,8 @@
     {
         NSLog(@"Найдено %lu корневых элементов", (unsigned long)[actorsNodes count]);
         
-        [_actorsObjects addObjectsFromArray:[RDHelper actorsParsToArray:actorsNodes]];
+                   [_actorsObjects addObjectsFromArray:[RDHelper actorsParsToArray:actorsNodes]];
+        
         
         
         [self.collectionView reloadData];
